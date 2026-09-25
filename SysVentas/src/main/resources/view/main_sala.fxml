@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="miContenedor"
+            xmlns="http://javafx.com/javafx/17.0.12"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="pe.edu.upeu.sysventas.controller.SalaController"
+            style="-fx-background-color: #F5F7FA;">
+
+    <children>
+
+        <VBox spacing="20"
+              AnchorPane.topAnchor="0"
+              AnchorPane.bottomAnchor="0"
+              AnchorPane.leftAnchor="0"
+              AnchorPane.rightAnchor="0"
+              style="-fx-padding: 0 35 30 35;">
+
+            <children>
+
+
+                <VBox spacing="5"
+                      style="-fx-background-color: #071A3D;
+                             -fx-padding: 25;
+                             -fx-background-radius: 0 0 12 12;">
+
+                    <children>
+
+                        <Label text="🎬  CINEPLANET"
+                               textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="28"/>
+                            </font>
+                        </Label>
+
+                        <Label text="GESTIÓN DE SALAS"
+                               textFill="#FFD43B">
+                            <font>
+                                <Font name="System Bold" size="20"/>
+                            </font>
+                        </Label>
+
+                    </children>
+
+                </VBox>
+
+
+
+                <HBox spacing="12"
+                      alignment="CENTER_LEFT">
+
+                    <children>
+
+                        <Label text="🔎  Buscar sala:"
+                               textFill="#071A3D">
+
+                            <font>
+                                <Font name="System Bold" size="16"/>
+                            </font>
+
+                        </Label>
+
+                        <TextField fx:id="txtBuscar"
+                                   promptText="Ingrese número o tipo de sala..."
+                                   prefWidth="360"
+                                   prefHeight="38"
+                                   style="-fx-background-color: white;
+                          -fx-border-color: #D5DCE5;
+                          -fx-border-radius: 6;
+                          -fx-background-radius: 6;"/>
+
+                        <Button text="BUSCAR"
+                                onAction="#buscarSala"
+                                prefWidth="105"
+                                prefHeight="38"
+                                textFill="WHITE"
+                                style="-fx-background-color: #071A3D;
+                       -fx-background-radius: 6;
+                       -fx-font-weight: bold;"/>
+
+                    </children>
+
+                </HBox>
+
+
+                <VBox VBox.vgrow="ALWAYS"
+                      style="-fx-background-color: white;
+                             -fx-background-radius: 10;
+                             -fx-border-color: #DDE2E8;
+                             -fx-border-radius: 10;
+                             -fx-padding: 10;">
+
+                    <children>
+
+                        <TableView fx:id="tableView"
+                                   VBox.vgrow="ALWAYS"
+                                   style="-fx-background-radius: 8;"/>
+
+                    </children>
+
+                </VBox>
+
+
+
+                <HBox spacing="15"
+                      alignment="CENTER">
+
+                    <children>
+
+
+                        <Button text=" NUEVA SALA"
+                                onAction="#nuevaSala"
+                                prefWidth="155"
+                                prefHeight="45"
+                                textFill="WHITE"
+                                style="-fx-background-color: #0B5ED7;
+                       -fx-background-radius: 7;
+                       -fx-font-weight: bold;
+                       -fx-font-size: 14px;"/>
+
+
+                        <Button text=" EDITAR"
+                                onAction="#editarSala"
+                                prefWidth="130"
+                                prefHeight="45"
+                                style="-fx-background-color: #FFD43B;
+                       -fx-text-fill: #071A3D;
+                       -fx-background-radius: 7;
+                       -fx-font-weight: bold;
+                       -fx-font-size: 14px;"/>
+
+
+
+                    </children>
+
+                </HBox>
+
+            </children>
+
+        </VBox>
+
+    </children>
+
+</AnchorPane>
